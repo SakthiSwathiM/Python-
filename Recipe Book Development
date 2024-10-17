@@ -1,0 +1,44 @@
+class Recipe:
+
+    def add_recipe(self, recipe):
+        self.recipes.append(recipe)
+
+    def view_recipes(self):
+        for idx, recipe in enumerate(self.recipes, start=1):
+            print("Recipe {idx}:\n{recipe}\n{'-'*40}")
+
+    def find_recipe(self, name):
+for recipe in self.recipes:
+def find_recipe(recipe_book):
+    name = input("Enter the name of the recipe to find: ")
+    recipe = recipe_book.find_recipe(name)
+    if recipe:
+        print(f"Recipe found:\n{recipe}")
+    else:
+        print("Recipe not found.")
+def main():
+    recipe_book = RecipeBook()
+    
+    while True:
+        print("\nRecipe Book Application")
+        print("1. Add a Recipe")
+        print("2. View All Recipes")
+        print("3. Find a Recipe")
+        print("4. Exit")
+        
+        choice = input("Enter your choice: ")
+        
+        if choice == '1':
+            add_recipe(recipe_book)
+        elif choice == '2':
+            view_recipes(recipe_book)
+        elif choice == '3':
+            find_recipe(recipe_book)
+        elif choice == '4':
+            print("Exiting the application. Goodbye!")
+            break
+        else:
+            print("Invalid choice, please try again.")
+
+if __name__ == "__main__":
+    main()
